@@ -1,0 +1,20 @@
+$selector-bg-color: #def1ff;
+
+.mode-selector {
+  width: 150px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: $selector-bg-color;
+  cursor: pointer;
+
+  &__option {
+    font-size: 16px;
+
+    &:checked {
+      background-color: $selector-bg-color;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+$squares-bg-color: #d0ebff;
+$squares-border-color: #1369d3;
+$squares-field-size: 500px;
+$square-size: 100px;
+
+.squares {
+  display: flex;
+  flex-wrap: wrap;
+  width: $squares-field-size;
+  height: $squares-field-size;
+  gap: 1px;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
+}
+
+.square {
+  width: $square-size;
+  height: $square-size;
+  border-radius: 10px;
+  background: $squares-bg-color;
+  border: 1px solid $squares-border-color;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    border-color: darken($squares-border-color, 10%);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &--active {
+    background-color: $squares-border-color;
+  }
+
+  @media (max-width: 1024px) {
+    width: calc(100% / 5 - 1px);
+    height: calc(100% / 5 - 1px);
+  }
+}

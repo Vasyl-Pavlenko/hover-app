@@ -1,0 +1,44 @@
+$button-bg-color: #def1ff;
+$button-hover-bg-color: rgb(112, 194, 245);
+
+.game {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 42px;
+  max-height: 100vh;
+  margin: 0 50px;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 300px;
+    max-width: 700px;
+
+    &--selectors {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &--button {
+      width: 150px;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      background-color: $button-bg-color;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: $button-hover-bg-color;
+      }
+    }
+  }
+}
